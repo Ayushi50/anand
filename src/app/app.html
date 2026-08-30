@@ -8,10 +8,10 @@
 
   <section class="hero" id="top">
     <div class="copy">
-      <p class="kicker">Independent visual designer</p>
+      <p class="kicker">2D / 3D artist & visual designer</p>
       <h1>BUILDING<br><em>VISUALS</em><br>THAT MATTER<span>.</span></h1>
-      <p class="intro">I create thoughtful 2D and 3D visuals, identities, and digital experiences with clarity and character.</p>
-      <div class="actions"><a class="primary" href="#work">View projects <b>→</b></a><a class="secondary" href="mailto:hello@anandnihal.com">Let's talk <b>↗</b></a></div>
+      <p class="intro">Anand Nihal is a 2D and 3D artist creating distinctive visuals, brand worlds, and digital work with clarity and character.</p>
+      <div class="actions"><a class="primary" href="#work">View projects <b>→</b></a><a class="secondary" href="#about">Let's talk <b>↓</b></a></div>
     </div>
 
     <div class="art" aria-label="Abstract 2D and 3D graphic composition">
@@ -21,12 +21,63 @@
     </div>
   </section>
 
-  <section class="services"><span>Identity</span><i>/</i><span>2D Design</span><i>/</i><span>3D Visuals</span><i>/</i><span>Art Direction</span><i>/</i><span>Digital</span></section>
+  <section class="services"><span>Brand Identity</span><i>/</i><span>2D Design</span><i>/</i><span>3D Visuals</span></section>
 
   <section class="work" id="work">
-    <div><p class="kicker">Selected work</p><h2>Ideas made<br>tangible.</h2></div>
-    <p>Currently curating a new selection of projects. In the meantime, view my earlier work in <a href="https://anandnihal.netlify.app/" target="_blank" rel="noreferrer">the archive ↗</a>.</p>
+    <div class="work-heading"><p class="kicker">Selected work</p><h2>Scroll the<br>stories.</h2></div>
+    <p class="work-intro">Explore a growing archive of brand work, 2D design, and 3D concepts. Swipe through a collection or open a complete project.</p>
+    <div class="work-tabs" role="tablist" aria-label="Work type">
+      <button type="button" role="tab" [class.is-active]="activeTab() === '2d'" [attr.aria-selected]="activeTab() === '2d'" (click)="activeTab.set('2d')">2D Work</button>
+      <button type="button" role="tab" [class.is-active]="activeTab() === '3d'" [attr.aria-selected]="activeTab() === '3d'" (click)="activeTab.set('3d')">3D Work</button>
+    </div>
+    @if (activeTab() === '2d') {
+    <div class="project-feed" role="tabpanel" aria-label="2D work">
+      <article class="project-card project-guidelines">
+        <img src="work/brand-guidelines-cover.png" alt="Cover of the Brand Guidelines project" />
+        <div class="project-meta"><span>01 / Identity system</span><span>29 pages</span></div>
+        <h3>Brand<br>Guidelines</h3>
+        <p>A typography-led identity guide that sets the visual rules for a cohesive brand.</p>
+        <a href="work/brand-guidelines.pdf" target="_blank" rel="noreferrer">Open <b>↗</b></a>
+      </article>
+      <article class="project-card project-teetwi">
+        <img src="work/teetwi-brand-booklet-cover.png" alt="Cover of the TeeTwi Brand Booklet project" />
+        <div class="project-meta"><span>02 / Brand identity</span><span>32 pages</span></div>
+        <h3>TeeTwi<br>Brand Booklet</h3>
+        <p>A fashion-forward brand world built around contrast, attitude, and a bold blue signature.</p>
+        <a href="work/teetwi-brand-booklet.pdf" target="_blank" rel="noreferrer">Open <b>↗</b></a>
+      </article>
+      <article class="project-card project-more">
+        <p class="kicker">More work</p>
+        <h3>See the<br>full archive.</h3>
+        <p>More 2D work, design studies, and visual experiments are available on Behance.</p>
+        <div class="archive-links"><a href="https://www.behance.net/itsanandnihal" target="_blank" rel="noreferrer">Browse Behance ↗</a><a href="https://gumroad.com/itsanandnihal" target="_blank" rel="noreferrer">View Gumroad ↗</a></div>
+      </article>
+    </div>
+    } @else {
+    <div class="project-feed" role="tabpanel" aria-label="3D work">
+      <article class="project-card project-3d">
+        <img src="work/holi-26k.webp" alt="Holi - 26k 3D event concept" />
+        <div class="project-meta"><span>01 / Event concept</span><span>3D</span></div>
+        <h3>Holi - 26k</h3>
+        <p>A colourful 3D festival environment designed around a Holi celebration.</p>
+        <a href="https://www.artstation.com/artwork/qJ4BbN?album_id=14392226" target="_blank" rel="noreferrer">Open <b>↗</b></a>
+      </article>
+      <article class="project-card project-3d">
+        <img src="work/appworld-2026.webp" alt="Appworld 2026 Concepts in 3D" />
+        <div class="project-meta"><span>02 / Event concept</span><span>3D</span></div>
+        <h3>Appworld<br>2026 Concepts</h3>
+        <p>3D event concepts developed for a future-facing Appworld experience.</p>
+        <a href="https://www.artstation.com/artwork/Ezr4Y0?album_id=14392226" target="_blank" rel="noreferrer">Open <b>↗</b></a>
+      </article>
+      <article class="project-card project-3d-archive">
+        <p class="kicker">Full 3D archive</p>
+        <h3>More worlds<br>to explore.</h3>
+        <p>Browse the complete collection of 3D concepts, models, and spatial design experiments.</p>
+        <div class="archive-links"><a href="https://www.artstation.com/itsanandnihal" target="_blank" rel="noreferrer">Explore ArtStation ↗</a><a href="https://www.cgtrader.com/itsanandnihal" target="_blank" rel="noreferrer">Browse CGTrader ↗</a></div>
+      </article>
+    </div>
+    }
   </section>
 
-  <footer id="about"><p>Available for select collaborations.</p><a href="mailto:hello@anandnihal.com">hello@anandnihal.com ↗</a><small>© 2026 Anand Nihal</small></footer>
+  <footer id="about"><p>Available for collaborations.</p><a href="mailto:itsanandnihal@gmail.com">itsanandnihal@gmail.com ↗</a><small><a href="https://www.linkedin.com/in/itsanandnihal" target="_blank" rel="noreferrer">LinkedIn</a> &nbsp; / &nbsp; <a href="https://www.behance.net/itsanandnihal" target="_blank" rel="noreferrer">Behance</a> &nbsp; / &nbsp; © 2026 Anand Nihal</small></footer>
 </main>
