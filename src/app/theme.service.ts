@@ -5,11 +5,11 @@ import { Injectable, inject, signal } from '@angular/core';
 export class ThemeService {
   private readonly document = inject(DOCUMENT);
   private readonly storageKey = 'anand-portfolio-theme';
-  readonly isDarkMode = signal(true);
+  readonly isDarkMode = signal(false);
 
   constructor() {
     const savedTheme = this.document.defaultView?.localStorage.getItem(this.storageKey);
-    this.setTheme(savedTheme !== 'light');
+    this.setTheme(savedTheme === 'dark');
   }
 
   toggle(): void {
@@ -18,7 +18,7 @@ export class ThemeService {
 
   private setTheme(isDarkMode: boolean): void {
     this.isDarkMode.set(isDarkMode);
-    this.document.documentElement.classList.toggle('light-mode', !isDarkMode);
+    this.document.documentElement.classList.toggle('dark-mode', isDarkMode);
     this.document.defaultView?.localStorage.setItem(this.storageKey, isDarkMode ? 'dark' : 'light');
   }
 }
