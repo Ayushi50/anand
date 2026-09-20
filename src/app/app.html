@@ -4,6 +4,7 @@
     <div class="links">
       <a href="#work">Work</a><a href="#about">About</a><a href="mailto:hello@anandnihal.com">Contact</a>
     </div>
+    <button class="theme-toggle" type="button" (click)="theme.toggle()" [attr.aria-label]="theme.isDarkMode() ? 'Switch to light mode' : 'Switch to dark mode'"><span aria-hidden="true">{{ theme.isDarkMode() ? '☀' : '☾' }}</span></button>
   </nav>
 
   <section class="hero" id="top">
@@ -26,13 +27,43 @@
   <section class="work" id="work">
     <div class="work-heading"><p class="kicker">Selected work</p><h2>Scroll the<br>stories.</h2></div>
     <p class="work-intro">Explore a growing archive of brand work, 2D design, and 3D concepts across a few focused projects and storefronts.</p>
-    <div class="project-feed" role="tabpanel" aria-label="Selected work">
+    <div class="work-tabs" role="tablist" aria-label="Work type">
+      <button type="button" role="tab" [class.is-active]="activeTab() === '2d'" [attr.aria-selected]="activeTab() === '2d'" (click)="activeTab.set('2d')">2D Work</button>
+      <button type="button" role="tab" [class.is-active]="activeTab() === '3d'" [attr.aria-selected]="activeTab() === '3d'" (click)="activeTab.set('3d')">3D Work</button>
+    </div>
+    @if (activeTab() === '2d') {
+    <div class="project-feed" role="tabpanel" aria-label="2D work">
       <article class="project-card project-guidelines">
         <img src="work/brand-guidelines-cover.png" alt="Cover of the Brand Guidelines project" />
-        <div class="project-meta"><span>01 / Identity system</span><span>2D</span></div>
+        <div class="project-meta"><span>01 / Identity system</span><span>29 pages</span></div>
         <h3>Brand<br>Guidelines</h3>
         <p>A typography-led identity guide that sets the visual rules for a cohesive brand.</p>
         <a href="work/brand-guidelines.pdf" target="_blank" rel="noreferrer">Open <b>↗</b></a>
+      </article>
+
+      <article class="project-card project-teetwi">
+        <img src="work/teetwi-brand-booklet-cover.png" alt="Cover of the TeeTwi Brand Booklet project" />
+        <div class="project-meta"><span>02 / Brand identity</span><span>32 pages</span></div>
+        <h3>TeeTwi<br>Brand Booklet</h3>
+        <p>A fashion-forward brand world built around contrast, attitude, and a bold blue signature.</p>
+        <a href="work/teetwi-brand-booklet.pdf" target="_blank" rel="noreferrer">Open <b>↗</b></a>
+      </article>
+
+      <article class="project-card project-more">
+        <p class="kicker">More work</p>
+        <h3>See the<br>full archive.</h3>
+        <p>More 2D work, design studies, and visual experiments are available on Behance.</p>
+        <div class="archive-links"><a href="https://www.behance.net/itsanandnihal" target="_blank" rel="noreferrer">Browse Behance ↗</a><a href="https://gumroad.com/itsanandnihal" target="_blank" rel="noreferrer">View Gumroad ↗</a><a routerLink="/work/2d" target="_blank" rel="noopener">Explore all 2D work →</a></div>
+      </article>
+    </div>
+    } @else {
+    <div class="project-feed" role="tabpanel" aria-label="3D work">
+      <article class="project-card project-3d">
+        <img src="work/holi-26k.webp" alt="Holi - 26k 3D event concept" />
+        <div class="project-meta"><span>01 / Event concept</span><span>3D</span></div>
+        <h3>Holi - 26k</h3>
+        <p>A colourful 3D festival environment designed around a Holi celebration.</p>
+        <a href="https://www.artstation.com/artwork/qJ4BbN?album_id=14392226" target="_blank" rel="noreferrer">Open <b>↗</b></a>
       </article>
 
       <article class="project-card project-3d">
@@ -43,18 +74,14 @@
         <a href="https://www.artstation.com/artwork/Ezr4Y0?album_id=14392226" target="_blank" rel="noreferrer">Open <b>↗</b></a>
       </article>
 
-      <article class="project-card project-more">
-        <p class="kicker">Portfolio archive</p>
-        <h3>More work<br>to explore.</h3>
-        <p>Behaviour, art direction, 3D concepts, and downloadable assets across multiple platforms.</p>
-        <div class="archive-links">
-          <a href="https://www.behance.net/itsanandnihal" target="_blank" rel="noreferrer">Behance ↗</a>
-          <a href="https://www.artstation.com/itsanandnihal" target="_blank" rel="noreferrer">ArtStation ↗</a>
-          <a href="https://www.cgtrader.com/designers/neu-blend" target="_blank" rel="noreferrer">CGTrader ↗</a>
-          <a href="https://neublend.gumroad.com/" target="_blank" rel="noreferrer">Gumroad ↗</a>
-        </div>
+      <article class="project-card project-3d-archive">
+        <p class="kicker">Full 3D archive</p>
+        <h3>More worlds<br>to explore.</h3>
+        <p>Browse the complete collection of 3D concepts, models, and spatial design experiments.</p>
+        <div class="archive-links"><a href="https://www.artstation.com/itsanandnihal" target="_blank" rel="noreferrer">Explore ArtStation ↗</a><a href="https://www.cgtrader.com/itsanandnihal" target="_blank" rel="noreferrer">Browse CGTrader ↗</a><a routerLink="/work/3d" target="_blank" rel="noopener">Explore all 3D work →</a></div>
       </article>
     </div>
+    }
   </section>
 
   <footer id="about"><p>Available for collaborations.</p><a href="mailto:itsanandnihal@gmail.com">itsanandnihal@gmail.com ↗</a><small><a href="https://www.linkedin.com/in/itsanandnihal" target="_blank" rel="noreferrer">LinkedIn</a> &nbsp; / &nbsp; <a href="https://www.behance.net/itsanandnihal" target="_blank" rel="noreferrer">Behance</a> &nbsp; / &nbsp; © 2026 Anand Nihal</small></footer>
