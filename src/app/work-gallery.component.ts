@@ -81,15 +81,8 @@ const POSTS: Record<WorkType, PortfolioPost[]> = {
       <section class="post-grid" [attr.aria-label]="workType.toUpperCase() + ' work'">
         @if (workType === '2d') {
             <article class="post-card pitchdeck-card">
-              <div class="pitchdeck-cover" aria-label="Abstract presentation slide graphic">
-                <div class="deck-sheet sheet-back"></div>
-                <div class="deck-sheet sheet-mid"></div>
-                <div class="deck-sheet sheet-front">
-                  <small>IDEAS / 2026</small>
-                  <strong>MAKE<br>IT<br>MOVE<span>.</span></strong>
-                  <div class="deck-chart"><i></i><i></i><i></i><i></i></div>
-                </div>
-                <span class="deck-index">01—05</span>
+              <div class="pitchdeck-cover">
+                <img src="work/pitchdeck-card-art.png" alt="Abstract pitch deck cover with folded blue paper and translucent red acetate" />
               </div>
               <div class="post-content">
                 <p class="post-category">Pitch deck · 5 projects</p>
