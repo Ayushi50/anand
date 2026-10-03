@@ -61,7 +61,7 @@ const PITCH_DECKS: PitchDeck[] = [
     <main class="pitchdeck-page">
       <nav aria-label="Portfolio navigation">
         <a class="logo" routerLink="/" target="_blank" rel="noopener noreferrer">ANAND NIHAL<span>.</span></a>
-        <div class="pitch-actions"><a class="back-link" routerLink="/work/2d">← Back to 2D stories</a><button class="theme-toggle" type="button" (click)="theme.toggle()" [attr.aria-label]="theme.isDarkMode() ? 'Switch to light mode' : 'Switch to dark mode'"><span aria-hidden="true">{{ theme.isDarkMode() ? '☀' : '☾' }}</span></button></div>
+        <div class="pitch-actions"><a class="back-link" routerLink="/work/2d">← Back to 2D stories</a><button class="theme-toggle" type="button" (click)="theme.toggle()" [attr.aria-label]="theme.isDarkMode() ? 'Switch to light mode' : 'Switch to dark mode'"><span class="theme-toggle-icon" aria-hidden="true">@if (theme.isDarkMode()) {<svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path></svg>} @else {<svg viewBox="0 0 24 24" focusable="false"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5 8.5 8.5 0 1 0 20.5 14.6Z"></path></svg>}</span></button></div>
       </nav>
       <header>
         <p class="kicker">2D stories / Pitch decks</p>

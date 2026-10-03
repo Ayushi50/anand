@@ -4,18 +4,33 @@
     <div class="links">
       <a href="#work">Work</a><a href="#about">About</a><a href="mailto:hello@anandnihal.com" target="_blank" rel="noopener noreferrer">Contact</a>
     </div>
-    <button class="theme-toggle" type="button" (click)="theme.toggle()" [attr.aria-label]="theme.isDarkMode() ? 'Switch to light mode' : 'Switch to dark mode'"><span aria-hidden="true">{{ theme.isDarkMode() ? '☀' : '☾' }}</span></button>
+    <button class="theme-toggle" type="button" (click)="theme.toggle()" [attr.aria-label]="theme.isDarkMode() ? 'Switch to light mode' : 'Switch to dark mode'">
+      <span class="theme-toggle-icon" aria-hidden="true">
+        @if (theme.isDarkMode()) {
+          <svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path></svg>
+        } @else {
+          <svg viewBox="0 0 24 24" focusable="false"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5 8.5 8.5 0 1 0 20.5 14.6Z"></path></svg>
+        }
+      </span>
+    </button>
   </nav>
 
   <section class="hero" id="top">
     <div class="copy">
-      <p class="kicker">2D / 3D artist & visual designer</p>
-      <h1>BUILDING<br><em>VISUALS</em><br>THAT MATTER<span>.</span></h1>
-      <p class="intro">I’m Anand, a 2D & 3D artist creating identities, images, and digital experiences that give ideas a visual personality.</p>
-      <div class="actions"><a class="primary" href="#work">View projects <b>→</b></a><a class="secondary" href="#about">Let's talk <b>↓</b></a></div>
+      <p class="kicker">Available for projects</p>
+      <h1>ANAND<br>NIHAL<span>.</span></h1>
+      <p class="intro">(2D / 3D VISUAL DESIGNER)</p>
+      <p class="hero-year">2026</p>
     </div>
 
     <div class="art" aria-label="Abstract 2D and 3D graphic composition">
+      <svg class="hero-linework" viewBox="0 0 1200 650" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 260 C95 225 120 150 176 66 C214 10 248 30 218 92 C188 153 99 205 80 287 C55 392 130 469 258 465 C382 461 397 364 493 311" />
+        <path d="M1200 86 C1106 119 1123 205 1185 201 C1244 197 1195 127 1120 137 C1045 146 939 205 1010 282 C1058 334 1122 354 1168 407 C1209 456 1172 514 1092 519 C987 526 913 484 838 441" />
+        <path d="M266 426 C341 465 355 542 456 550 C548 558 599 515 646 548 C694 582 652 638 742 642 C836 646 830 565 894 545" />
+      </svg>
+      <div class="scribble scribble-one"></div><div class="scribble scribble-two"></div>
+      <div class="tool-tile figma-tile">F</div><div class="tool-tile ps-tile">Ps</div><div class="tool-tile ai-tile">Ai</div><div class="tool-tile id-tile">Id</div>
       <div class="orbit one"></div><div class="orbit two"></div><div class="dots"></div>
       <div class="black-block"></div><div class="red-block"></div><div class="arch-shadow"></div><div class="arch"></div>
       <div class="cube"><i></i><b></b></div><div class="disc"></div><div class="shadow"></div>
@@ -35,6 +50,7 @@
       <article class="story-card story-2d">
         <a class="story-card-link" routerLink="/work/2d" target="_blank" rel="noopener noreferrer" aria-label="Explore 2D stories">
           <div class="story-visual story-visual-2d" aria-label="Abstract 2D design composition">
+            <img class="card-art-image" src="work/2d-card-art.png" alt="Geometric 2D collage with layered paper forms" />
             <div class="visual-2d-frame"><span>A</span><i></i><b></b></div>
             <strong>TYPE<br>IMAGE<br>IDEA.</strong>
           </div>
@@ -49,6 +65,7 @@
       <article class="story-card story-3d">
         <a class="story-card-link" routerLink="/work/3d" target="_blank" rel="noopener noreferrer" aria-label="Explore 3D visuals">
           <div class="story-visual story-visual-3d" aria-label="Abstract 3D visual composition">
+            <img class="card-art-image" src="work/3d-card-art.png" alt="3D still life with ceramic, glass, and blue sculptural forms" />
             <div class="visual-3d-disc"></div><div class="visual-3d-cube"></div><div class="visual-3d-ring"></div>
             <strong>SPACE<br>LIGHT<br>FORM.</strong>
           </div>
