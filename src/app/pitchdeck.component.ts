@@ -53,14 +53,6 @@ const PITCH_DECKS: PitchDeck[] = [
     href: 'work/tee-twi-pitch-deck.pdf'
   },
   {
-    title: 'Dream on Looms',
-    category: 'Pitch deck · 18 pages',
-    image: 'work/dream-on-looms-pitch-deck-cover.jpg',
-    alt: 'Cover of the Dream on Looms pitch deck',
-    description: 'A textile-led brand pitch deck with a warm, crafted visual direction.',
-    href: 'work/dream-on-looms-pitch-deck.pdf'
-  },
-  {
     title: 'Ein Coffee',
     category: 'Pitch deck · 20 pages',
     image: 'work/ein-coffee-pitch-deck-cover.jpg',

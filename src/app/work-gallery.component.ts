@@ -34,6 +34,14 @@ const POSTS: Record<WorkType, PortfolioPost[]> = {
       href: 'work/brand-guidelines.pdf'
     },
     {
+      title: 'Dream on Looms',
+      category: 'Brand identity pitch deck · 18 pages',
+      image: 'work/dream-on-looms-pitch-deck-cover.jpg',
+      alt: 'Cover of the Dream on Looms pitch deck',
+      description: 'A textile-led brand direction celebrating traditional weaving, craftsmanship, and handcrafted textiles.',
+      href: 'work/dream-on-looms-pitch-deck.pdf'
+    },
+    {
       title: 'TeeTwi Brand Booklet',
       category: 'Brand identity · 32 pages',
       image: 'work/teetwi-brand-booklet-cover.png',
@@ -85,7 +93,7 @@ const POSTS: Record<WorkType, PortfolioPost[]> = {
                 <img src="work/pitchdeck-card-art.png" alt="Abstract pitch deck cover with folded blue paper and translucent red acetate" />
               </div>
               <div class="post-content">
-                <p class="post-category">Pitch deck · 5 projects</p>
+                <p class="post-category">Pitch deck · 7 projects</p>
                 <h2>PitchDeck</h2>
                 <p>A collection of brand directions and visual stories.</p>
                 <a routerLink="/work/2d/pitchdeck" target="_blank" rel="noopener noreferrer">Open <b>↗</b></a>
