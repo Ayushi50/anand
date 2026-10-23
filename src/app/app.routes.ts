@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { PitchDeckComponent } from './pitchdeck.component';
+import { PdfViewerComponent } from './pdf-viewer.component';
 import { WorkGalleryComponent } from './work-gallery.component';
 
 export const routes: Routes = [
@@ -8,5 +9,6 @@ export const routes: Routes = [
   { path: 'work/2d/pitchdeck', component: PitchDeckComponent, title: 'PitchDeck — Anand Nihal' },
   { path: 'work/2d', component: WorkGalleryComponent, data: { workType: '2d' }, title: '2D Work — Anand Nihal' },
   { path: 'work/3d', component: WorkGalleryComponent, data: { workType: '3d' }, title: '3D Work — Anand Nihal' },
+  { path: 'view/:file', component: PdfViewerComponent, title: 'Viewer — Anand Nihal' },
   { path: '**', redirectTo: '' }
 ];

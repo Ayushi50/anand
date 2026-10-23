@@ -107,7 +107,7 @@ const POSTS: Record<WorkType, PortfolioPost[]> = {
               <p class="post-category">{{ post.category }}</p>
               <h2>{{ post.title }}</h2>
               <p>{{ post.description }}</p>
-              <a [href]="post.href" target="_blank" rel="noreferrer">Open <b>↗</b></a>
+              @if (isPdf(post.href)) {<a [routerLink]="['/view', viewId(post.href)]" target="_blank" rel="noopener noreferrer">Open <b>↗</b></a>} @else {<a [href]="post.href" target="_blank" rel="noreferrer">Open <b>↗</b></a>}
             </div>
           </article>
         }
@@ -124,4 +124,6 @@ export class WorkGalleryComponent {
   protected readonly theme = inject(ThemeService);
   protected readonly workType = this.route.snapshot.data['workType'] as WorkType;
   protected readonly posts = POSTS[this.workType];
+  protected viewId(href: string) { return href.replace(/^work\/|\.pdf$/g, ''); }
+  protected isPdf(href: string) { return href.endsWith('.pdf'); }
 }

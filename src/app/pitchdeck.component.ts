@@ -91,7 +91,7 @@ const PITCH_DECKS: PitchDeck[] = [
               <p class="category">{{ deck.category }}</p>
               <h2>{{ deck.title }}</h2>
               <p>{{ deck.description }}</p>
-              <a [href]="deck.href" target="_blank" rel="noreferrer">Open <b>↗</b></a>
+              <a [routerLink]="viewerLink(deck.href)" target="_blank" rel="noopener noreferrer">Open <b>↗</b></a>
             </div>
           </article>
         }
@@ -120,4 +120,5 @@ const PITCH_DECKS: PitchDeck[] = [
 export class PitchDeckComponent {
   protected readonly theme = inject(ThemeService);
   protected readonly decks = PITCH_DECKS;
+  protected viewerLink(href: string) { return ['/view', href.replace(/^work\/|\.pdf$/g, '')]; }
 }
