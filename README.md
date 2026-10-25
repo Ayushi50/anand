@@ -36,6 +36,10 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
+## Rendering and deployment
+
+The production build prerenders the homepage and portfolio pages to HTML, so crawlers can read their content without running JavaScript. Deploy `dist/anand-cream-portfolio/browser` as the Vercel output directory. The PDF viewer at `/view/:file` remains client-rendered because it relies on browser APIs; `vercel.json` routes those URLs to the client-rendered shell.
+
 ## Running unit tests
 
 To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:

@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/view/:file",
+      "destination": "/index.csr.html"
+    }
+  ]
+}
