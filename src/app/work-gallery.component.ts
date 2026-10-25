@@ -48,6 +48,22 @@ const POSTS: Record<WorkType, PortfolioPost[]> = {
       alt: 'Cover of the TeeTwi Brand Booklet project',
       description: 'A fashion-forward brand world built around contrast, attitude, and a bold blue signature.',
       href: 'work/teetwi-brand-booklet.pdf'
+    },
+    {
+      title: 'Ein Coffee',
+      category: 'Pitch deck · 20 pages',
+      image: 'work/ein-coffee-pitch-deck-cover.jpg',
+      alt: 'Cover of the Ein Coffee pitch deck',
+      description: 'A coffee brand pitch deck with a rich, coffee-inspired visual identity.',
+      href: 'work/ein-coffee-pitch-deck.pdf'
+    },
+    {
+      title: 'Wayra Bus',
+      category: 'Pitch deck · 17 pages',
+      image: 'work/wayra-bus-pitch-deck-cover.jpg',
+      alt: 'Cover of the Wayra Bus pitch deck',
+      description: 'A bus brand pitch deck with a vibrant, travel-focused visual direction.',
+      href: 'work/wayra-bus-pitch-deck.pdf'
     }
   ],
   '3d': [
@@ -93,7 +109,7 @@ const POSTS: Record<WorkType, PortfolioPost[]> = {
                 <img src="work/pitchdeck-card-art.png" alt="Abstract pitch deck cover with folded blue paper and translucent red acetate" />
               </div>
               <div class="post-content">
-                <p class="post-category">Pitch deck · 7 projects</p>
+                <p class="post-category">Pitch deck · 5 projects</p>
                 <h2>PitchDeck</h2>
                 <p>A collection of brand directions and visual stories.</p>
                 <a routerLink="/work/2d/pitchdeck" target="_blank" rel="noopener noreferrer">Open <b>↗</b></a>

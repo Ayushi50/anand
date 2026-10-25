@@ -51,22 +51,6 @@ const PITCH_DECKS: PitchDeck[] = [
     alt: 'Cover of the Tee Twi pitch deck',
     description: 'A youth-focused fashion identity direction with expressive graphics and a bold streetwear attitude.',
     href: 'work/tee-twi-pitch-deck.pdf'
-  },
-  {
-    title: 'Ein Coffee',
-    category: 'Pitch deck · 20 pages',
-    image: 'work/ein-coffee-pitch-deck-cover.jpg',
-    alt: 'Cover of the Ein Coffee pitch deck',
-    description: 'A coffee brand pitch deck with a rich, coffee-inspired visual identity.',
-    href: 'work/ein-coffee-pitch-deck.pdf'
-  },
-  {
-    title: 'Wayra Bus',
-    category: 'Pitch deck · 17 pages',
-    image: 'work/wayra-bus-pitch-deck-cover.jpg',
-    alt: 'Cover of the Wayra Bus pitch deck',
-    description: 'A bus brand pitch deck with a vibrant, travel-focused visual direction.',
-    href: 'work/wayra-bus-pitch-deck.pdf'
   }
 ];
 
